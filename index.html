@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper converter-wrapper">
+        <div class="block converter-block">
+            <div class="block converter-block-side converter-give">
+                <div class="converter-give-title side-title">Отдаёте</div>
+                <div class="converter-input__give converter-input">
+                    <div id="input-give__label" class="input-give__label">USDT</div>
+                    <input id="input-give-amount" class="" type="text">
+                </div>
+                <ul id="converter-give-currency" class="converter-give-currency">
+                </ul>
+            </div>
+            <div class="block converter-block-side converter-get">
+                <div class="converter-get-title side-title">Получаете</div>
+                <div class="converter-input__get converter-input">
+                    <div id="input-get__label" class="input-get__label">USDT</div>
+                    <input id="input-get-amount" class="" type="text">
+                </div>
+                <ul id="converter-get-currency" class="converter-get-currency">
+
+                </ul>
+                <div class="converter-button-container">
+                    <div id="converter-button" class="converter-button">Продолжить</div>
+                </div>
+            </div>
+            <div id="" class="converter-button__reverse"></div>
+        </div>
+        <div class="block form-block">
+            <Form id="MyForm">
+                <div class="form-block__title">ВВОД ДАННЫХ</div>
+                <div class="form-block__form">
+                    <div class="form-block__left">
+                        <div class="form-block__data">
+                            <input class="form-block__input" id="name" placeholder="ФИО" type="name" required>
+                        </div>
+                        <div class="form-block__data">
+                            <input class="form-block__input" id="tel" placeholder="номер телефона" type="tel" required>
+                        </div>
+                        <div class="form-block__data">
+                            <input class="form-block__input"
+                                placeholder="карта на которую нужно вывести итоговую валюту" pattern="[0-9]{16}" id="card-number" name="card-number" type="card-number" required>
+                        </div>
+                    </div>
+                    <div class="form-block__right">
+                        <div class="form-block__data">
+                            <div class="form-block__messenger-title">удобный менеджер для связи</div>
+                            <div class="form-block__messenger-list">
+                                <div class="form-block__messenger"><img src="./images/whatsapp.svg" alt=""><input
+                                        type="checkbox" id="myCheckboxWhatsapp" name="messenger"><label
+                                        for="myCheckboxWhatsapp"></label></div>
+                                <div class="form-block__messenger"><img src="./images/telegram.svg" alt=""><input
+                                        type="checkbox" id="myCheckboxTelegram" name="messenger"><label
+                                        for="myCheckboxTelegram"></label></div>
+                                <div class="form-block__messenger"><img src="./images/viber.svg" alt=""><input
+                                        type="checkbox" id="myCheckboxViber" name="messenger"><label
+                                        for="myCheckboxViber"></label></div>
+                            </div>
+                        </div>
+                        <div class="form-block__data"> <input class="form-block__input" id="comments" placeholder="комментарии"
+                                type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-block__send">
+                    <div class="form-block__checkbox"> <input type="checkbox"> Я соглашаюсь с <span
+                            class="form-block__policy"><a>Политикой</a></span></div>
+                    <div class="form-block__button disabled" id="submit-btn">Отправить заявку</div>
+                    <div class="form-block__division">ЛИБО</div>
+                    <div class="form-block__button disabled">Помощь менеджера</div>
+                </div>
+            </Form>
+        </div>
+    </div>
+
+
+
+    <script type="module" src="./js/sendForm.js"></script>
+    <script src="./js/converter copy NEW NEW NEW.js"></script>
+    <script src="./js/buttons.js"></script>
+    <!-- <script src="./js/getCurrencyApi.js"></script> -->
+</body>
+
+</html>
