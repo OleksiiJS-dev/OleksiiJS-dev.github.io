@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
-
+    <link rel="stylesheet" href="./converter/css/styles.css">
     <title>Document</title>
 </head>
 
@@ -38,7 +37,7 @@
             <div id="" class="converter-button__reverse"></div>
         </div>
         <div class="block form-block">
-            <Form id="MyForm">
+            <Form id="MyForm" action="">
                 <div class="form-block__title">ВВОД ДАННЫХ</div>
                 <div class="form-block__form">
                     <div class="form-block__left">
@@ -52,18 +51,22 @@
                             <input class="form-block__input"
                                 placeholder="карта на которую нужно вывести итоговую валюту" pattern="[0-9]{16}" id="card-number" name="card-number" type="card-number" required>
                         </div>
+                        <div class="form-block__data">
+                            <input class="form-block__input"
+                                placeholder="Промокод" pattern="" id="promo" name="promo" type="promo" required>
+                        </div>
                     </div>
-                    <div class="form-block__right">
+                    <div class="form-block__right"> 
                         <div class="form-block__data">
                             <div class="form-block__messenger-title">удобный менеджер для связи</div>
                             <div class="form-block__messenger-list">
-                                <div class="form-block__messenger"><img src="./images/whatsapp.svg" alt=""><input
+                                <div class="form-block__messenger"><img src="./converter/images/whatsapp.svg" alt=""><input
                                         type="checkbox" id="myCheckboxWhatsapp" name="messenger"><label
                                         for="myCheckboxWhatsapp"></label></div>
-                                <div class="form-block__messenger"><img src="./images/telegram.svg" alt=""><input
+                                <div class="form-block__messenger"><img src="./converter/images/telegram.svg" alt=""><input
                                         type="checkbox" id="myCheckboxTelegram" name="messenger"><label
                                         for="myCheckboxTelegram"></label></div>
-                                <div class="form-block__messenger"><img src="./images/viber.svg" alt=""><input
+                                <div class="form-block__messenger"><img src="./converter/images/viber.svg" alt=""><input
                                         type="checkbox" id="myCheckboxViber" name="messenger"><label
                                         for="myCheckboxViber"></label></div>
                             </div>
@@ -78,18 +81,14 @@
                             class="form-block__policy"><a>Политикой</a></span></div>
                     <div class="form-block__button disabled" id="submit-btn">Отправить заявку</div>
                     <div class="form-block__division">ЛИБО</div>
-                    <div class="form-block__button disabled">Помощь менеджера</div>
+                    <a class="form-block__help" href="https://t.me/Konvert_Main" target="_blank"><div class="form-block__button">Помощь менеджера</div></a>
                 </div>
             </Form>
         </div>
     </div>
-
-
-
-    <script type="module" src="./js/sendForm.js"></script>
-    <script src="./js/converter copy NEW NEW NEW.js"></script>
-    <script src="./js/buttons.js"></script>
-    <!-- <script src="./js/getCurrencyApi.js"></script> -->
+    <script src="./converter/js/sendForm.js"></script>
+    <script src="./converter/js/converter.js"></script>
+    <script src="./converter/js/buttons.js"></script>
 </body>
 
 </html>
