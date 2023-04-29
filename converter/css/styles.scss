@@ -8,10 +8,8 @@
 }
 
 body {
-    height: 2000px; // ASDMNADSJDHASKJLADSNL
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
-    margin-top: 100px;
     color: #FFFFFF;
     background: #555659;
 }
@@ -19,6 +17,9 @@ body {
 .wrapper {
     display: flex;
     flex-direction: column;
+    padding-top: 22px;
+    overflow: hidden;
+    height: 823px;
 }
 
 .converter-block {
@@ -101,7 +102,7 @@ body {
 
             input:focus-within {
 
-                border-bottom: 1px solid #05bbc4;
+                border-bottom: 1px solid #558ac7;
                 transition: .5s linear;
             }
 
@@ -153,7 +154,7 @@ body {
 
                 cursor: pointer;
                 transition: .5s ease;
-                border-left: 3px solid #05bbc4;
+                border-left: 3px solid #558ac7;
                 background: #565b69;
             }
         }
@@ -197,7 +198,7 @@ body {
 
                 cursor: pointer;
                 transition: .5s ease;
-                border-left: 3px solid #05bbc4;
+                border-left: 3px solid #558ac7;
                 background: #565b69;
             }
         }
@@ -221,7 +222,7 @@ body {
         .converter-give-currency::-webkit-scrollbar-thumb {
             width: 2px;
             border: 1px solid #36373C;
-            background-color: #128c92;
+            background-color: #558ac7;
             border-radius: 10px;
         }
 
@@ -238,14 +239,14 @@ body {
                 cursor: pointer;
                 padding: 15px 35px;
                 border-radius: 3px;
-                background: #148d93;
+                background: #558ac7;
                 font-size: 18px;
                 line-height: 22px;
             }
 
             .converter-button:hover {
                 transition: .5s ease;
-                background: #00696e;
+                background: #558ac7;
             }
         }
     }
@@ -280,6 +281,7 @@ body {
     visibility: hidden;
     opacity: 0;
     box-sizing: border-box;
+    display: none;
 
     .form-block__title {
         font-weight: 600;
@@ -431,7 +433,7 @@ body {
   }
 
 .active {
-    border-left: 3px solid #05bbc4;
+    border-left: 3px solid #558ac7;
     background: #565b69;
 }
 
@@ -441,7 +443,7 @@ body {
     height: 22px;
     content: '';
     right: 20px;
-    background-color: #05bbc4;
+    background-color: #558ac7;
     border-radius: 50%;
     background-image: url('../images/done1.svg');
     background-repeat: no-repeat;
@@ -453,6 +455,7 @@ body {
     visibility: visible;
     opacity: 1;
     transition: opacity, 0.5s ease;
+    display: block;
 }
 
 .display {

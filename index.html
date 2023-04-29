@@ -37,7 +37,7 @@
             <div id="" class="converter-button__reverse"></div>
         </div>
         <div class="block form-block">
-            <Form id="MyForm" action="">
+            <Form id="MyForm">
                 <div class="form-block__title">ВВОД ДАННЫХ</div>
                 <div class="form-block__form">
                     <div class="form-block__left">
@@ -53,7 +53,7 @@
                         </div>
                         <div class="form-block__data">
                             <input class="form-block__input"
-                                placeholder="Промокод" pattern="" id="promo" name="promo" type="promo" required>
+                                placeholder="Промокод" pattern="" id="promo" name="promo" type="promo">
                         </div>
                     </div>
                     <div class="form-block__right"> 
@@ -62,13 +62,13 @@
                             <div class="form-block__messenger-list">
                                 <div class="form-block__messenger"><img src="./converter/images/whatsapp.svg" alt=""><input
                                         type="checkbox" id="myCheckboxWhatsapp" name="messenger"><label
-                                        for="myCheckboxWhatsapp"></label></div>
+                                        for="myCheckboxWhatsapp" required></label></div>
                                 <div class="form-block__messenger"><img src="./converter/images/telegram.svg" alt=""><input
                                         type="checkbox" id="myCheckboxTelegram" name="messenger"><label
-                                        for="myCheckboxTelegram"></label></div>
+                                        for="myCheckboxTelegram" required></label></div>
                                 <div class="form-block__messenger"><img src="./converter/images/viber.svg" alt=""><input
                                         type="checkbox" id="myCheckboxViber" name="messenger"><label
-                                        for="myCheckboxViber"></label></div>
+                                        for="myCheckboxViber" required></label></div>
                             </div>
                         </div>
                         <div class="form-block__data"> <input class="form-block__input" id="comments" placeholder="комментарии"
@@ -79,7 +79,7 @@
                 <div class="form-block__send">
                     <div class="form-block__checkbox"> <input type="checkbox"> Я соглашаюсь с <span
                             class="form-block__policy"><a>Политикой</a></span></div>
-                    <div class="form-block__button disabled" id="submit-btn">Отправить заявку</div>
+                    <button type="submit" class="form-block__input disabled form-block__button" id="submit-btn" >Отправить заявку</button>
                     <div class="form-block__division">ЛИБО</div>
                     <a class="form-block__help" href="https://t.me/Konvert_Main" target="_blank"><div class="form-block__button">Помощь менеджера</div></a>
                 </div>
