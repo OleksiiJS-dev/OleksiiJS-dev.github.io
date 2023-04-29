@@ -38,22 +38,20 @@
         </div>
         <div class="block form-block">
             <Form id="MyForm">
-                <div class="form-block__title">Ваше ФИО латиницей</div>
                 <div class="form-block__form">
                     <div class="form-block__left">
                         <div class="form-block__data">
+                            <label for="name">Ваше ФИО латиницей</label>
                             <input class="form-block__input" id="name" placeholder="Ivanov Ivan Ivanovich" type="name" required>
                         </div>
                         <div class="form-block__data">
+                            <label for="tel">Ваш номер телефона:</label>
                             <input class="form-block__input" id="tel" placeholder="+ХХХ…" type="tel" required>
                         </div>
                         <div class="form-block__data">
+                            <label for="card-number">Карта, на которую вы хотите получить выбранную валюту.</br> Если желаете получить наличные, укажите нужный город, страну</label>
                             <input class="form-block__input"
-                                placeholder="Карта, на которую вы хотите получить выбранную валюту. Если желаете получить наличные, укажите нужный город, страну" pattern="[0-9]{16}" id="card-number" name="card-number" type="card-number" required>
-                        </div>
-                        <div class="form-block__data">
-                            <input class="form-block__input"
-                                placeholder="Промокод (необязательно)" pattern="" id="promo" name="promo" type="promo">
+                                placeholder="" pattern="[0-9]{16}" id="card-number" name="card-number" type="card-number" required>
                         </div>
                     </div>
                     <div class="form-block__right"> 
@@ -71,15 +69,12 @@
                                         for="myCheckboxViber" required></label></div>
                             </div>
                         </div>
-                        <div class="form-block__data"> <input class="form-block__input" id="comments" placeholder="Комментарии (необязательно)"
-                                type="text">
-                        </div>
                     </div>
                 </div>
                 <div class="form-block__send">
                     <div class="form-block__checkbox"> <input type="checkbox"> Я соглашаюсь с <span
                             class="form-block__policy"><a>Политикой</a></span></div>
-                    <div type="submit" class="form-block__input  form-block__button disabled" id="submit-btn" value="Отправить заявку">Отправить заявку</div>
+                    <div type="submit" class="form-block__button disabled" id="submit-btn" value="Отправить заявку">Отправить заявку</div>
                     <div class="form-block__division">ЛИБО</div>
                     <a class="form-block__help" href="https://t.me/Konvert_Main" target="_blank"><div class="form-block__button">Помощь менеджера</div></a>
                 </div>

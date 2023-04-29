@@ -239,10 +239,16 @@ body {
   box-sizing: border-box;
   display: none;
 }
-.form-block .form-block__title {
-  font-weight: 600;
-  font-size: 22px;
-  line-height: 30px;
+.form-block .form-block__input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-size: 17px;
+  border-radius: 3px;
+  background: #555659;
+  box-sizing: border-box;
+  border: none;
   color: #fff;
 }
 .form-block .form-block__form {
@@ -254,22 +260,14 @@ body {
 }
 .form-block .form-block__form .form-block__right {
   width: 48%;
-  padding-top: 20px;
 }
 .form-block .form-block__form .form-block__data {
   flex-basis: 50%;
   box-sizing: border-box;
 }
-.form-block .form-block__form .form-block__data .form-block__input {
-  width: 100%;
-  padding: 15px;
-  margin-bottom: 10px;
-  margin-top: 20px;
-  font-size: 17px;
-  border-radius: 3px;
-  background: #555659;
-  box-sizing: border-box;
-  border: none;
+.form-block .form-block__form .form-block__data label {
+  max-width: fit-content;
+  line-height: 30px;
   color: #fff;
 }
 .form-block .form-block__form .form-block__data .form-block__input:focus {
@@ -286,6 +284,10 @@ body {
 .form-block .form-block__form .form-block__messenger {
   display: flex;
   flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .form-block .form-block__form .form-block__messenger img {
   width: 40px;
@@ -311,7 +313,7 @@ body {
   border: 2px solid grey;
   position: absolute;
   left: 8px;
-  top: 12px;
+  top: 21px;
 }
 .form-block .form-block__form .form-block__messenger input[type=checkbox]:checked + label:before {
   background-color: #007bff;
@@ -345,6 +347,7 @@ body {
   background: #558ac7;
   font-size: 18px;
   line-height: 22px;
+  cursor: pointer;
 }
 .form-block .form-block__send .form-block__policy {
   color: red;

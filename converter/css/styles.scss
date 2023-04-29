@@ -283,14 +283,20 @@ body {
     box-sizing: border-box;
     display: none;
 
-    .form-block__title {
-        font-weight: 600;
-        font-size: 22px;
-        line-height: 30px;
+    
+
+    .form-block__input {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        font-size: 17px;
+        border-radius: 3px;
+        background: #555659;
+        box-sizing: border-box;
+        border: none;
         color: #fff;
     }
-
-    .form-block__input {}
 
     .form-block__form {
         display: flex;
@@ -302,24 +308,16 @@ body {
 
         .form-block__right {
             width: 48%;
-            padding-top: 20px;
         }
 
         .form-block__data {
             flex-basis: 50%;
             box-sizing: border-box;
 
-            .form-block__input {
-                width: 100%;
-                padding: 15px;
-                margin-bottom: 10px;
-                margin-top: 20px;
-                font-size: 17px;
-                border-radius: 3px;
-                background: #555659;
-                box-sizing: border-box;
-                border: none;
-                color: #fff;
+            label {
+                max-width: fit-content;
+                    line-height: 30px;
+                    color: #fff;
             }
 
             .form-block__input:focus {
@@ -338,8 +336,10 @@ body {
         .form-block__messenger {
             display: flex;
             flex-direction: column;
-
-
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
 
             img {
                 width: 40px;
@@ -362,13 +362,14 @@ body {
 
             label:before {
                 content: "";
-                display: inline-block;
-                width: 20px;
-                height: 20px;
-                border: 2px solid grey;
-                position: absolute;
-                left: 8px;
-                top: 12px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid grey;
+    position: absolute;
+    left: 8px;
+    top: 21px;
+
             }
 
             input[type="checkbox"]:checked+label:before {
@@ -398,7 +399,7 @@ body {
         .form-block__button {
             font-family: 'Source Sans Pro';
             border: none;
-            pointer-events:all;
+            pointer-events: all;
             white-space: nowrap;
             border-radius: 3px;
             padding: 15px 35px;
@@ -407,7 +408,7 @@ body {
             background: #558ac7;
             font-size: 18px;
             line-height: 22px;
-            // width: 200px;
+            cursor: pointer;
         }
         .form-block__policy{
             color: red;
