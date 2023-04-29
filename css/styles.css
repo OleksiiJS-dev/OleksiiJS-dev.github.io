@@ -330,12 +330,13 @@ body {
   align-items: center;
 }
 .form-block .form-block__send .form-block__button {
+  white-space: nowrap;
   pointer-events: all;
   border-radius: 3px;
   padding: 15px 35px;
   text-align: center;
   color: #fff;
-  background: #148d93;
+  background: #558ac7;
   font-size: 18px;
   line-height: 22px;
   width: 200px;
