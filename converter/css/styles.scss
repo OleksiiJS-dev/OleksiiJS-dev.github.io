@@ -397,16 +397,18 @@ body {
         }
 
         .form-block__button {
-
-
+            font-family: 'Source Sans Pro';
+            border: none;
+            pointer-events:all;
+            white-space: nowrap;
             border-radius: 3px;
             padding: 15px 35px;
             text-align: center;
             color: #fff;
-            background: #148d93;
+            background: #558ac7;
             font-size: 18px;
             line-height: 22px;
-            width: 200px;
+            // width: 200px;
         }
         .form-block__policy{
             color: red;
@@ -428,8 +430,10 @@ body {
 }
 
 .form-block__button.disabled {
+    pointer-events: none;
     cursor: not-allowed;
     opacity: 0.5;
+    
   }
 
 .active {
