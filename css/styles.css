@@ -330,6 +330,7 @@ body {
   align-items: center;
 }
 .form-block .form-block__send .form-block__button {
+  pointer-events: all;
   border-radius: 3px;
   padding: 15px 35px;
   text-align: center;
@@ -357,6 +358,7 @@ body {
 }
 
 .form-block__button.disabled {
+  pointer-events: none;
   cursor: not-allowed;
   opacity: 0.5;
 }
