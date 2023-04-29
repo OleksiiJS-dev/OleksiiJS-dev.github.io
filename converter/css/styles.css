@@ -105,12 +105,7 @@ body {
   position: relative;
 }
 .converter-block .converter-block-side .converter-give-currency li .converter-give-currency__icon {
-  background: #e0e0e0;
-  border-radius: 50px;
-  padding: 5px;
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .converter-block .converter-block-side .converter-give-currency li .converter-give-currency__name {
   font-size: 16px;
@@ -120,9 +115,10 @@ body {
   text-transform: uppercase;
 }
 .converter-block .converter-block-side .converter-give-currency li img {
-  border: 5px;
+  border: 5px solid #e0e0e0;
   height: 25px;
   width: 25px;
+  border-radius: 50px;
 }
 .converter-block .converter-block-side .converter-give-currency li:hover {
   cursor: pointer;
@@ -138,9 +134,7 @@ body {
   position: relative;
 }
 .converter-block .converter-block-side .converter-get-currency li .converter-give-currency__icon {
-  background: #e0e0e0;
   border-radius: 50px;
-  padding: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -153,9 +147,10 @@ body {
   text-transform: uppercase;
 }
 .converter-block .converter-block-side .converter-get-currency li img {
-  border: 5px;
+  border: 5px solid #e0e0e0;
   height: 25px;
   width: 25px;
+  border-radius: 50px;
 }
 .converter-block .converter-block-side .converter-get-currency li:hover {
   cursor: pointer;
