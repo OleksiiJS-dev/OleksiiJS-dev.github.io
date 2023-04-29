@@ -243,7 +243,6 @@ body {
   font-weight: 600;
   font-size: 22px;
   line-height: 30px;
-  text-transform: uppercase;
   color: #fff;
 }
 .form-block .form-block__form {
@@ -281,7 +280,7 @@ body {
 }
 .form-block .form-block__form .form-block__messenger-list {
   display: flex;
-  gap: 10px;
+  gap: 38px;
   padding-bottom: 40px;
 }
 .form-block .form-block__form .form-block__messenger {
@@ -289,7 +288,7 @@ body {
   flex-direction: column;
 }
 .form-block .form-block__form .form-block__messenger img {
-  width: 55px;
+  width: 40px;
 }
 .form-block .form-block__form .form-block__messenger input[type=checkbox] {
   display: none;
@@ -311,7 +310,7 @@ body {
   height: 20px;
   border: 2px solid grey;
   position: absolute;
-  left: 15px;
+  left: 8px;
   top: 12px;
 }
 .form-block .form-block__form .form-block__messenger input[type=checkbox]:checked + label:before {
