@@ -16,7 +16,7 @@ const symbolsІecond = [
         image: './converter/images/4. RUB.svg'
     },
     {
-        name: 'KZT', 
+        name: 'KZT',
         image: './converter/images/5. KZT.svg'
     },
     {
@@ -53,8 +53,15 @@ const inputGetLabel = document.getElementById("input-get__label");
 const inputGiveLabel = document.getElementById("input-give__label");
 const sideTitleGet = document.querySelector(".converter-get-title");
 const sideTitleGive = document.querySelector(".converter-give-title");
+const checkbox = document.querySelector('.form-block__checkbox input');
+const submitButton = document.querySelector('.form-block__button');
+const messengerCheckboxes = document.querySelectorAll('input[name="messenger"]');
 const formBlock = document.querySelector(".form-block");
+
 converterActionButton?.addEventListener('click', () => {
+    const activeElementGive = document.querySelector('#converter-give-currency li.active');
+    const activeElementGet = document.querySelector('#converter-get-currency li.active');
+
     converterActionButton.classList.add("display");
     converterBlockSide?.classList.add("small");
     converterGet?.classList.add("small");
@@ -64,32 +71,30 @@ converterActionButton?.addEventListener('click', () => {
     inputGetAmount?.classList.add("input-second-block");
     sideTitleGet?.classList.add("title-get-second-block");
     sideTitleGive?.classList.add("title-give-second-block");
-    formBlock?.classList.add("visible")
-    if (inputGetLabel) {
-        inputGetLabel.textContent = '';
-    };
-    if (inputGiveLabel) {
-        inputGiveLabel.textContent = '';
-    };
-    const activeElementGive = document.querySelector('#converter-give-currency li.active');
-    const activeElementGet = document.querySelector('#converter-get-currency li.active');
+    formBlock?.classList.add("visible");
+
     if (activeElementGive) {
         const secondSpanGive = activeElementGive.children[1];
         const firstSpanGive = activeElementGive.children[0];
         if (secondSpanGive && firstSpanGive) {
-            sideTitleGive.innerHTML = secondSpanGive.textContent;
-            inputGiveLabel.innerHTML = firstSpanGive.innerHTML;
-        }
+            sideTitleGive.innerHTML = '';
+            inputGiveLabel.innerHTML = secondSpanGive.innerHTML + firstSpanGive.innerHTML;
+            inputGiveLabel?.classList.add("small-give__label")
+            inputGiveLabel?.classList.remove("input-give__label")
+        } 
+    
         if (activeElementGet) {
             const secondSpanGet = activeElementGet.querySelectorAll('span')[1];
             const firstSpanGet = activeElementGet.querySelectorAll('span')[0];
             if (secondSpanGet && firstSpanGet) {
-                sideTitleGet.innerHTML = secondSpanGet.textContent;
-                inputGetLabel.innerHTML = firstSpanGet.innerHTML;
+                sideTitleGet.innerHTML = ''
+                inputGetLabel.innerHTML = secondSpanGet.innerHTML + firstSpanGet.innerHTML;
+                inputGetLabel?.classList.add("small-get__label")
+                inputGetLabel?.classList.remove("input-get__label")
             }
         }
     }
-    const messengerCheckboxes = document.querySelectorAll('input[name="messenger"]');
+
     messengerCheckboxes.forEach((checkbox) => {
         checkbox.addEventListener('change', (event) => {
             if (event.target.checked) {
@@ -101,8 +106,7 @@ converterActionButton?.addEventListener('click', () => {
             }
         });
     });
-    const checkbox = document.querySelector('.form-block__checkbox input');
-    const submitButton = document.querySelector('.form-block__button');
+
     checkbox.addEventListener('change', function () {
         if (checkbox.checked) {
             submitButton.classList.remove('disabled');

@@ -59,23 +59,11 @@ body {
             .input-give__label {
                 position: absolute;
                 right: 42px;
-
-                img {
-                    width: 30px;
-                    margin: 0 7px;
-                    opacity: 1 !important;
-                }
             }
 
             .input-get__label {
                 position: absolute;
                 right: 15px;
-
-                img {
-                    width: 30px;
-                    margin: 0 7px;
-                    opacity: 1 !important;
-                }
             }
 
             .input-get__label,
@@ -84,8 +72,14 @@ body {
                 font-size: 18px;
                 line-height: 100%;
                 color: #757575;
-
+                img {
+                    width: 30px;
+                    margin: 0 7px;
+                    opacity: 1 !important;
+                }
             }
+
+            
 
             input {
                 border: none;
@@ -511,6 +505,36 @@ body {
     text-transform: uppercase;
 }
 
+.small-give__label {
+                display: flex;
+                align-items: center;
+                font-weight: 400;
+                font-size: 25px;
+                line-height: 80%;
+                color: white;
+                position: absolute;
+                right: 42px;
+                img {
+                    width: 30px;
+                    margin: 0 7px;
+                    opacity: 1 !important;
+                }
+            }
+.small-get__label {
+                display: flex;
+                align-items: center;
+                font-weight: 400;
+                font-size: 25px;
+                line-height: 80%;
+                color: white;
+                position: absolute;
+                right: 15px;
+                img {
+                    width: 30px;
+                    margin: 0 7px;
+                    opacity: 1 !important;
+                }
+            }
 @media (min-width: 1200px) {
     .converter-block-side {
         flex-basis: 520px;
