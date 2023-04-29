@@ -392,8 +392,8 @@ body {
   display: block !important;
   border-radius: 4px !important;
   margin-bottom: 31px !important;
-  margin-top: -20px !important;
-  transition: border-radius, margin-bottom, margin-top 0.5s ease;
+  margin-top: -4px !important;
+  transition: border-radius 0.5s ease;
   text-transform: uppercase;
 }
 
@@ -401,8 +401,8 @@ body {
   display: block !important;
   border-radius: 4px !important;
   margin-bottom: 30px !important;
-  margin-top: -20px !important;
-  transition: border-radius, margin-bottom, margin-top 0.5s ease;
+  margin-top: -4px !important;
+  transition: border-radius 0.5s ease;
   text-transform: uppercase;
 }
 
