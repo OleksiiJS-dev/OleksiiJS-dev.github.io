@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
 *,
 ** {
@@ -288,42 +287,10 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  gap: 13px;
 }
 .form-block .form-block__form .form-block__messenger img {
   width: 40px;
-}
-.form-block .form-block__form .form-block__messenger input[type=checkbox] {
-  display: none;
-}
-.form-block .form-block__form .form-block__messenger label {
-  display: inline-block;
-  cursor: pointer;
-  font-size: 16px;
-  position: relative;
-  padding-left: 30px;
-  /* Ширина чекбокса + отступ слева */
-  margin-right: 15px;
-  /* Отступ между чекбоксом и текстом */
-}
-.form-block .form-block__form .form-block__messenger label:before {
-  content: "";
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 2px solid grey;
-  position: absolute;
-  left: 8px;
-  top: 21px;
-}
-.form-block .form-block__form .form-block__messenger input[type=checkbox]:checked + label:before {
-  background-color: #007bff;
-  border-color: #007bff;
-  content: "✓";
-  /* Символ галочки */
-  color: #fff;
-  text-align: center;
-  line-height: 20px;
-  font-size: 16px;
 }
 .form-block .form-block__send {
   padding-top: 20px;

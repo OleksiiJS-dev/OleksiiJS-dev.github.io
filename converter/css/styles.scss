@@ -335,53 +335,54 @@ body {
 
         .form-block__messenger {
             display: flex;
-            flex-direction: column;
-            align-content: center;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 13px;
 
             img {
                 width: 40px;
             }
 
-            input[type="checkbox"] {
-                display: none;
-            }
+    //         input[type="checkbox"] {
+    //             display: none;
+    //         }
 
-            label {
-                display: inline-block;
-                cursor: pointer;
-                font-size: 16px;
-                position: relative;
-                padding-left: 30px;
-                /* Ширина чекбокса + отступ слева */
-                margin-right: 15px;
-                /* Отступ между чекбоксом и текстом */
-            }
+    //         label {
+    //             display: inline-block;
+    //             cursor: pointer;
+    //             font-size: 16px;
+    //             position: relative;
+    //             padding-left: 30px;
+    //             /* Ширина чекбокса + отступ слева */
+    //             margin-right: 15px;
+    //             /* Отступ между чекбоксом и текстом */
+    //         }
 
-            label:before {
-                content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 2px solid grey;
-    position: absolute;
-    left: 8px;
-    top: 21px;
+    //         label:before {
+    //             content: "";
+    // display: inline-block;
+    // width: 20px;
+    // height: 20px;
+    // border: 2px solid grey;
+    // position: absolute;
+    // left: 8px;
+    // top: 21px;
 
-            }
+    //         }
 
-            input[type="checkbox"]:checked+label:before {
-                background-color: #007bff;
-                border-color: #007bff;
-                content: "\2713";
-                /* Символ галочки */
-                color: #fff;
-                text-align: center;
-                line-height: 20px;
-                font-size: 16px;
-            }
+    //         input[type="checkbox"]:checked+label:before {
+    //             background-color: #007bff;
+    //             border-color: #007bff;
+    //             content: "\2713";
+    //             /* Символ галочки */
+    //             color: #fff;
+    //             text-align: center;
+    //             line-height: 20px;
+    //             font-size: 16px;
+    //         }
         }
     }
 
