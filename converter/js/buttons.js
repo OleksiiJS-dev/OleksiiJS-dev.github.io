@@ -87,7 +87,7 @@ converterActionButton?.addEventListener('click', () => {
             const secondSpanGet = activeElementGet.querySelectorAll('span')[1];
             const firstSpanGet = activeElementGet.querySelectorAll('span')[0];
             if (secondSpanGet && firstSpanGet) {
-                sideTitleGet.innerHTML = '';
+                sideTitleGet.innerHTML = null;
                 inputGetLabel.innerHTML = secondSpanGet.innerHTML + firstSpanGet.innerHTML;
                 inputGetLabel?.classList.add("small-get__label")
                 inputGetLabel?.classList.remove("input-get__label")
