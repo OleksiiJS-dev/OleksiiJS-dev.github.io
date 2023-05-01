@@ -1,19 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
-*,
-** {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-body {
-  margin: 0;
+.wrapper {
   font-family: "Source Sans Pro", sans-serif;
   color: #FFFFFF;
-  background: #555659;
-}
-
-.wrapper {
+  margin-top: 25px;
+  list-style: none;
   display: flex;
   flex-direction: column;
   padding-top: 22px;
@@ -33,7 +23,7 @@ body {
   position: relative;
   background: #3e4046;
   border-radius: 10px;
-  padding-bottom: 100px;
+  padding-bottom: 101px;
 }
 .converter-block .converter-block-side .side-title {
   font-size: 25px;
@@ -45,6 +35,14 @@ body {
   background: #3e4046;
   margin-top: -10px;
   border-radius: 10px;
+}
+.converter-block .converter-block-side .title-give-second-block {
+  display: block;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  margin-top: -4px;
+  transition: border-radius 0.5s ease;
+  text-transform: uppercase;
 }
 .converter-block .converter-block-side .converter-input {
   font-size: 20px;
@@ -160,6 +158,7 @@ body {
 }
 .converter-block .converter-block-side .converter-get-currency,
 .converter-block .converter-block-side .converter-give-currency {
+  margin: 0;
   padding: 0;
   height: 398px;
   overflow: auto;
@@ -207,7 +206,7 @@ body {
   height: 55px;
   border-radius: 100px;
   border: 7px solid #555659;
-  background: url("../images/white-gray switch.svg");
+  background: url("https://www.konvert.gg/wp-content/uploads/converter/images/white-gray switch.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 57px;
@@ -343,7 +342,7 @@ body {
   right: 20px;
   background-color: #558ac7;
   border-radius: 50%;
-  background-image: url("../images/done1.svg");
+  background-image: url("https://www.konvert.gg/wp-content/uploads/converter/images/done1.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -366,6 +365,7 @@ body {
   border-radius: 4px !important;
   height: 40px !important;
   transition: height, border-radius, 0.5s ease;
+  padding-bottom: 34px !important;
 }
 
 .small-ul {
@@ -392,16 +392,8 @@ body {
   text-transform: uppercase;
 }
 
-.title-give-second-block {
-  display: block !important;
-  border-radius: 4px !important;
-  margin-bottom: 30px !important;
-  margin-top: -4px !important;
-  transition: border-radius 0.5s ease;
-  text-transform: uppercase;
-}
-
 .small-give__label {
+  height: 30px;
   display: flex;
   align-items: center;
   font-weight: 400;
@@ -412,12 +404,12 @@ body {
   right: 42px;
 }
 .small-give__label img {
-  width: 30px;
+  height: 30px;
   margin: 0 7px;
-  opacity: 1 !important;
 }
 
 .small-get__label {
+  height: 30px;
   display: flex;
   align-items: center;
   font-weight: 400;
@@ -428,9 +420,8 @@ body {
   right: 15px;
 }
 .small-get__label img {
-  width: 30px;
+  height: 30px;
   margin: 0 7px;
-  opacity: 1 !important;
 }
 
 @media (min-width: 1200px) {
@@ -522,4 +513,4 @@ body {
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=styles5.css.map */

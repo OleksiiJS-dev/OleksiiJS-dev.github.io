@@ -1,20 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
 
-*,
-** {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-body {
-    margin: 0;
+.wrapper {
     font-family: 'Source Sans Pro', sans-serif;
     color: #FFFFFF;
-    background: #555659;
-}
-
-.wrapper {
+    margin-top: 25px;
+    list-style: none;
     display: flex;
     flex-direction: column;
     padding-top: 22px;
@@ -30,12 +20,10 @@ body {
     position: relative;
 
     .converter-block-side {
-        height: 520px;
         position: relative;
         background: #3e4046;
         border-radius: 10px;
-        padding-bottom: 100px;
-
+        padding-bottom: 101px;
         .side-title {
             font-size: 25px;
             line-height: 80%;
@@ -46,6 +34,15 @@ body {
             background: #3e4046;
             margin-top: -10px;
             border-radius: 10px;
+        }
+
+        .title-give-second-block {
+            display: block;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            margin-top: -4px;
+            transition: border-radius 0.5s ease;
+            text-transform: uppercase;
         }
 
         .converter-input {
@@ -72,6 +69,7 @@ body {
                 font-size: 18px;
                 line-height: 100%;
                 color: #757575;
+
                 img {
                     width: 30px;
                     margin: 0 7px;
@@ -79,7 +77,7 @@ body {
                 }
             }
 
-            
+
 
             input {
                 border: none;
@@ -133,9 +131,9 @@ body {
 
                 img {
                     border: 5px solid #e0e0e0;
-    height: 25px;
-    width: 25px;
-    border-radius: 50px;
+                    height: 25px;
+                    width: 25px;
+                    border-radius: 50px;
                 }
 
             }
@@ -176,9 +174,9 @@ body {
 
                 img {
                     border: 5px solid #e0e0e0;
-    height: 25px;
-    width: 25px;
-    border-radius: 50px;
+                    height: 25px;
+                    width: 25px;
+                    border-radius: 50px;
                 }
 
             }
@@ -194,9 +192,10 @@ body {
 
         .converter-get-currency,
         .converter-give-currency {
-            padding: 0;
-            height: 398px;
-            overflow: auto;
+            margin: 0;
+    padding: 0;
+    height: 398px;
+    overflow: auto;
         }
 
         .converter-get-currency::-webkit-scrollbar,
@@ -247,8 +246,8 @@ body {
         width: 55px;
         height: 55px;
         border-radius: 100px;
-        border: 7px solid #555659;
-        background: url('../images/white-gray switch.svg');
+        border: 7px solid #555659;      
+        background: url('https://www.konvert.gg/wp-content/uploads/converter/images/white-gray switch.svg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: 57px;
@@ -272,7 +271,15 @@ body {
     box-sizing: border-box;
     display: none;
 
-    
+    .form-block__title {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: #fff;
+        padding-bottom: 20px;
+    }
+
 
     .form-block__input {
         width: 100%;
@@ -305,73 +312,74 @@ body {
 
             label {
                 max-width: fit-content;
-                    line-height: 30px;
-                    color: #fff;
+                line-height: 30px;
+                color: #fff;
             }
 
             .form-block__input:focus {
                 outline: none;
             }
         }
-        .form-block__messenger-title{
+
+        .form-block__messenger-title {
             padding-bottom: 25px;
         }
+
         .form-block__messenger-list {
             display: flex;
-  gap: 38px;
-  padding-bottom: 40px;
+            gap: 38px;
         }
 
         .form-block__messenger {
             display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 13px;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 13px;
 
             img {
                 width: 40px;
             }
 
-    //         input[type="checkbox"] {
-    //             display: none;
-    //         }
+            //         input[type="checkbox"] {
+            //             display: none;
+            //         }
 
-    //         label {
-    //             display: inline-block;
-    //             cursor: pointer;
-    //             font-size: 16px;
-    //             position: relative;
-    //             padding-left: 30px;
-    //             /* Ширина чекбокса + отступ слева */
-    //             margin-right: 15px;
-    //             /* Отступ между чекбоксом и текстом */
-    //         }
+            //         label {
+            //             display: inline-block;
+            //             cursor: pointer;
+            //             font-size: 16px;
+            //             position: relative;
+            //             padding-left: 30px;
+            //             /* Ширина чекбокса + отступ слева */
+            //             margin-right: 15px;
+            //             /* Отступ между чекбоксом и текстом */
+            //         }
 
-    //         label:before {
-    //             content: "";
-    // display: inline-block;
-    // width: 20px;
-    // height: 20px;
-    // border: 2px solid grey;
-    // position: absolute;
-    // left: 8px;
-    // top: 21px;
+            //         label:before {
+            //             content: "";
+            // display: inline-block;
+            // width: 20px;
+            // height: 20px;
+            // border: 2px solid grey;
+            // position: absolute;
+            // left: 8px;
+            // top: 21px;
 
-    //         }
+            //         }
 
-    //         input[type="checkbox"]:checked+label:before {
-    //             background-color: #007bff;
-    //             border-color: #007bff;
-    //             content: "\2713";
-    //             /* Символ галочки */
-    //             color: #fff;
-    //             text-align: center;
-    //             line-height: 20px;
-    //             font-size: 16px;
-    //         }
+            //         input[type="checkbox"]:checked+label:before {
+            //             background-color: #007bff;
+            //             border-color: #007bff;
+            //             content: "\2713";
+            //             /* Символ галочки */
+            //             color: #fff;
+            //             text-align: center;
+            //             line-height: 20px;
+            //             font-size: 16px;
+            //         }
         }
     }
 
@@ -381,8 +389,8 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-    
-        .form-block__help{
+
+        .form-block__help {
             text-decoration: none;
         }
 
@@ -400,10 +408,12 @@ body {
             line-height: 22px;
             cursor: pointer;
         }
-        .form-block__policy{
+
+        .form-block__policy {
             color: red;
         }
-        .form-block__division{
+
+        .form-block__division {
             padding-top: 35px;
             padding-bottom: 35px;
             font-weight: 600;
@@ -412,7 +422,8 @@ body {
             text-transform: uppercase;
             color: #fff;
         }
-        .form-block__checkbox{
+
+        .form-block__checkbox {
             padding-bottom: 13px;
             color: grey;
         }
@@ -423,8 +434,8 @@ body {
     pointer-events: none;
     cursor: not-allowed;
     opacity: 0.5;
-    
-  }
+
+}
 
 .active {
     border-left: 3px solid #558ac7;
@@ -439,7 +450,7 @@ body {
     right: 20px;
     background-color: #558ac7;
     border-radius: 50%;
-    background-image: url('../images/done1.svg');
+    background-image: url('https://www.konvert.gg/wp-content/uploads/converter/images/done1.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -462,7 +473,6 @@ body {
     border-radius: 4px !important;
     height: 40px !important;
     transition: height, border-radius, 0.5s ease;
-
 }
 
 .small-ul {
@@ -488,48 +498,40 @@ body {
     margin-top: -4px !important;
     transition: border-radius 0.5s ease;
     text-transform: uppercase;
-
-}
-
-.title-give-second-block {
-    display: block !important;
-    border-radius: 4px !important;
-    margin-bottom: 30px !important;
-    margin-top: -4px !important;
-    transition: border-radius 0.5s ease;
-    text-transform: uppercase;
 }
 
 .small-give__label {
-                display: flex;
-                align-items: center;
-                font-weight: 400;
-                font-size: 25px;
-                line-height: 80%;
-                color: white;
-                position: absolute;
-                right: 42px;
-                img {
-                    width: 30px;
-                    margin: 0 7px;
-                    opacity: 1 !important;
-                }
-            }
+    height: 30px;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 80%;
+    color: white;
+    position: absolute;
+    right: 42px;
+    img{
+        height: 30px;
+        margin: 0 7px;
+    }
+}
+
 .small-get__label {
-                display: flex;
-                align-items: center;
-                font-weight: 400;
-                font-size: 25px;
-                line-height: 80%;
-                color: white;
-                position: absolute;
-                right: 15px;
-                img {
-                    width: 30px;
-                    margin: 0 7px;
-                    opacity: 1 !important;
-                }
-            }
+    height: 30px;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 80%;
+    color: white;
+    position: absolute;
+    right: 15px;
+    img{
+        height: 30px;
+        margin: 0 7px;
+    }
+}
+
 @media (min-width: 1200px) {
     .converter-block-side {
         flex-basis: 520px;
