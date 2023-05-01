@@ -14,47 +14,47 @@ giveCurrencyAmount.value = giveCurrencyAmount.placeholder;
 getCurrencyAmount.placeholder = 1;
 getCurrencyAmount.value = getCurrencyAmount.placeholder;
 const symbols = [
-  {
+  { 
     name: 'USDT',
-    image: './converter/images/1. USDT.svg'
+    image: 'https://www.konvert.gg/wp-content/uploads/converter/images/1. USDT.svg'
   },
   {
     name: 'EUR',
-    image: './converter/images/2. EUR.svg'
+    image: 'https://www.konvert.gg/wp-content/uploads/converter/images/2. EUR.svg'
   },
   {
     name: 'UAH',
-    image: './converter/images/3. UAH.svg'
+    image: 'https://www.konvert.gg/wp-content/uploads/converter/images/3. UAH.svg'
   },
   {
     name: 'RUB',
-    image: './converter/images/4. RUB.svg'
+    image: 'https://www.konvert.gg/wp-content/uploads/converter/images/4. RUB.svg'
   },
   {
     name: 'KZT',
-    image: './converter/images/5. KZT.svg'
+    image: 'https://www.konvert.gg/wp-content/uploads/converter/images/5. KZT.svg'
   },
   {
     name: 'BYN',
-    image: './converter/images/6. BYN.svg'
+    image: 'https://www.konvert.gg/wp-content/uploads/converter/images/6. BYN.svg'
   },
   {
     name: 'KGS',
-    image: './converter/images/7. KGS.svg'
+    image: 'https://www.konvert.gg/wp-content/uploads/converter/images/7. KGS.svg'
   },
   {
     name: 'TJS',
-    image: './converter/images/8. TJS.svg'
+    image: 'https://www.konvert.gg/wp-content/uploads/converter/images/8. TJS.svg'
   },
   {
     name: 'GEL',
-    image: './converter/images/9. GEL.svg'
+    image: 'https://www.konvert.gg/wp-content/uploads/converter/images/9. GEL.svg'
   },
   {
     name: 'USD',
-    image: './converter/images/10. USD.svg'
+    image: 'https://www.konvert.gg/wp-content/uploads/converter/images/10. USD.svg'
   }
-];
+];                                                            
 for (let i = 0; i < symbols.length; i++) {
   const li = document.createElement('li');
 

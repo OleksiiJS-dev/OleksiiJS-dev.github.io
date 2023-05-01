@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./converter/css/styles.css">
+    <link rel="stylesheet" href="./converter/css/styles6.css">
     <title>Document</title>
 </head>
 
@@ -13,7 +13,7 @@
     <div class="wrapper converter-wrapper">
         <div class="block converter-block">
             <div class="block converter-block-side converter-give">
-                <div class="converter-give-title side-title">Отдаёте</div>
+                <div id="converter-give-title" class="side-title">Отдаёте</div>
                 <div class="converter-input__give converter-input">
                     <div id="input-give__label" class="input-give__label">USDT</div>
                     <input id="input-give-amount" class="" type="text">
@@ -38,6 +38,7 @@
         </div>
         <div class="block form-block">
             <Form id="MyForm">
+                <div class="form-block__title">ВВОД ДАННЫХ</div>
                 <div class="form-block__form">
                     <div class="form-block__left">
                         <div class="form-block__data">
@@ -56,7 +57,7 @@
                     </div>
                     <div class="form-block__right"> 
                         <div class="form-block__data">
-                            <div class="form-block__messenger-title">удобный менеджер для связи</div>
+                            <div class="form-block__messenger-title">Удобный менеджер для связи</div>
                             <div class="form-block__messenger-list">
                                 <div class="form-block__messenger"><img src="./converter/images/whatsapp.svg" alt=""><input
                                         type="checkbox" id="myCheckboxWhatsapp" name="messenger"><label
@@ -68,6 +69,16 @@
                                         type="checkbox" id="myCheckboxViber" name="messenger"><label
                                         for="myCheckboxViber" required></label></div>
                             </div>
+                        </div>
+                        <div class="form-block__data">
+                            <label for="promocode">Введите промокод</label>
+                            <input class="form-block__input"
+                                placeholder="Промокод" id="promocode" name="promocode" type="promocode">
+                        </div>
+                        <div class="form-block__data">
+                            <label for="commentary">Введите комментарий</label>
+                            <input class="form-block__input"
+                                placeholder="Комментарий" id="commentary" name="commentary" type="commentary">
                         </div>
                     </div>
                 </div>

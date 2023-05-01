@@ -183,536 +183,51 @@ require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-functions.php';
 
 function my_converter() {
     ob_start();
-    ?>
+    ?>  
     <style>
-    @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
-*,
-** {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-body {
-  height: 2000px;
-  margin: 0;
-  font-family: "Source Sans Pro", sans-serif;
-  margin-top: 100px;
-  color: #FFFFFF;
-  background: #555659;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.converter-block {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  position: relative;
-}
-.converter-block .converter-block-side {
-  height: 520px;
-  position: relative;
-  background: #3e4046;
-  border-radius: 10px;
-  padding-bottom: 100px;
-}
-.converter-block .converter-block-side .side-title {
-  font-size: 25px;
-  line-height: 80%;
-  color: #FFFFFF;
-  margin-bottom: 17px;
-  padding: 15px;
-  display: inline-block;
-  background: #3e4046;
-  margin-top: -10px;
-  border-radius: 10px;
-}
-.converter-block .converter-block-side .converter-input {
-  font-size: 20px;
-  margin-top: -37px;
-  padding: 15px;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-.converter-block .converter-block-side .converter-input .input-give__label {
-  position: absolute;
-  right: 42px;
-}
-.converter-block .converter-block-side .converter-input .input-give__label img {
-  width: 30px;
-  margin: 0 7px;
-  opacity: 1 !important;
-}
-.converter-block .converter-block-side .converter-input .input-get__label {
-  position: absolute;
-  right: 15px;
-}
-.converter-block .converter-block-side .converter-input .input-get__label img {
-  width: 30px;
-  margin: 0 7px;
-  opacity: 1 !important;
-}
-.converter-block .converter-block-side .converter-input .input-get__label,
-.converter-block .converter-block-side .converter-input .input-give__label {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 100%;
-  color: #757575;
-}
-.converter-block .converter-block-side .converter-input input {
-  border: none;
-  box-shadow: none;
-  background: #3e4046;
-  padding: 15px 10px;
-  padding-right: 40px;
-  font-size: 20px;
-  color: #fff;
-  outline: none;
-  border-bottom: 1px solid #fff;
-  width: 100%;
-}
-.converter-block .converter-block-side .converter-input input:focus-within {
-  border-bottom: 1px solid #05bbc4;
-  transition: 0.5s linear;
-}
-.converter-block .converter-block-side .converter-input__give {
-  padding-right: 42px;
-}
-.converter-block .converter-block-side .converter-input__get {
-  padding-left: 35px;
-}
-.converter-block .converter-block-side .converter-give-currency li {
-  padding: 15px;
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid #505050;
-  position: relative;
-}
-.converter-block .converter-block-side .converter-give-currency li .converter-give-currency__icon {
-  background: #e0e0e0;
-  border-radius: 50px;
-  padding: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.converter-block .converter-block-side .converter-give-currency li .converter-give-currency__name {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 30px;
-  margin-left: 10px;
-  text-transform: uppercase;
-}
-.converter-block .converter-block-side .converter-give-currency li img {
-  border: 5px;
-  height: 25px;
-  width: 25px;
-}
-.converter-block .converter-block-side .converter-give-currency li:hover {
-  cursor: pointer;
-  transition: 0.5s ease;
-  border-left: 3px solid #05bbc4;
-  background: #565b69;
-}
-.converter-block .converter-block-side .converter-get-currency li {
-  padding: 15px;
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid #505050;
-  position: relative;
-}
-.converter-block .converter-block-side .converter-get-currency li .converter-give-currency__icon {
-  background: #e0e0e0;
-  border-radius: 50px;
-  padding: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.converter-block .converter-block-side .converter-get-currency li .converter-give-currency__name {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 30px;
-  margin-left: 10px;
-  text-transform: uppercase;
-}
-.converter-block .converter-block-side .converter-get-currency li img {
-  border: 5px;
-  height: 25px;
-  width: 25px;
-}
-.converter-block .converter-block-side .converter-get-currency li:hover {
-  cursor: pointer;
-  transition: 0.5s ease;
-  border-left: 3px solid #05bbc4;
-  background: #565b69;
-}
-.converter-block .converter-block-side .converter-get-currency,
-.converter-block .converter-block-side .converter-give-currency {
-  padding: 0;
-  height: 398px;
-  overflow: auto;
-}
-.converter-block .converter-block-side .converter-get-currency::-webkit-scrollbar,
-.converter-block .converter-block-side .converter-give-currency::-webkit-scrollbar {
-  width: 8px;
-  background-color: #36373C;
-  opacity: 0.33;
-  border-radius: 10px;
-}
-.converter-block .converter-block-side .converter-get-currency::-webkit-scrollbar-thumb,
-.converter-block .converter-block-side .converter-give-currency::-webkit-scrollbar-thumb {
-  width: 2px;
-  border: 1px solid #36373C;
-  background-color: #128c92;
-  border-radius: 10px;
-}
-.converter-block .converter-block-side .converter-button-container {
-  display: flex;
-  justify-content: flex-end;
-  padding: 0 15px;
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  box-sizing: border-box;
-}
-.converter-block .converter-block-side .converter-button-container .converter-button {
-  cursor: pointer;
-  padding: 15px 35px;
-  border-radius: 3px;
-  background: #148d93;
-  font-size: 18px;
-  line-height: 22px;
-}
-.converter-block .converter-block-side .converter-button-container .converter-button:hover {
-  transition: 0.5s ease;
-  background: #00696e;
-}
-.converter-block .converter-button__reverse {
-  position: absolute;
-  transform: translateX(0%);
-  top: 34px;
-  width: 55px;
-  height: 55px;
-  border-radius: 100px;
-  border: 7px solid #555659;
-  background: url("white-gray switch.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 57px;
-}
-.converter-block .second-block {
-  opacity: 0;
-}
-
-.form-block {
-  margin: 0 auto;
-  margin-top: 15px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  background-color: #3e4046;
-  visibility: hidden;
-  opacity: 0;
-  box-sizing: border-box;
-}
-.form-block .form-block__title {
-  font-weight: 600;
-  font-size: 22px;
-  line-height: 30px;
-  text-transform: uppercase;
-  color: #fff;
-}
-.form-block .form-block__form {
-  display: flex;
-  justify-content: space-between;
-}
-.form-block .form-block__form .form-block__left {
-  width: 48%;
-}
-.form-block .form-block__form .form-block__right {
-  width: 48%;
-  padding-top: 20px;
-}
-.form-block .form-block__form .form-block__data {
-  flex-basis: 50%;
-  box-sizing: border-box;
-}
-.form-block .form-block__form .form-block__data .form-block__input {
-  width: 100%;
-  padding: 15px;
-  margin-bottom: 10px;
-  margin-top: 20px;
-  font-size: 17px;
-  border-radius: 3px;
-  background: #555659;
-  box-sizing: border-box;
-  border: none;
-  color: #fff;
-}
-.form-block .form-block__form .form-block__data .form-block__input:focus {
-  outline: none;
-}
-.form-block .form-block__form .form-block__messenger-title {
-  padding-bottom: 25px;
-}
-.form-block .form-block__form .form-block__messenger-list {
-  display: flex;
-  gap: 10px;
-  padding-bottom: 40px;
-}
-.form-block .form-block__form .form-block__messenger {
-  display: flex;
-  flex-direction: column;
-}
-.form-block .form-block__form .form-block__messenger img {
-  width: 55px;
-}
-.form-block .form-block__form .form-block__messenger input[type=checkbox] {
-  display: none;
-}
-.form-block .form-block__form .form-block__messenger label {
-  display: inline-block;
-  cursor: pointer;
-  font-size: 16px;
-  position: relative;
-  padding-left: 30px;
-  /* Ширина чекбокса + отступ слева */
-  margin-right: 15px;
-  /* Отступ между чекбоксом и текстом */
-}
-.form-block .form-block__form .form-block__messenger label:before {
-  content: "";
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 2px solid grey;
-  position: absolute;
-  left: 15px;
-  top: 12px;
-}
-.form-block .form-block__form .form-block__messenger input[type=checkbox]:checked + label:before {
-  background-color: #007bff;
-  border-color: #007bff;
-  content: "✓";
-  /* Символ галочки */
-  color: #fff;
-  text-align: center;
-  line-height: 20px;
-  font-size: 16px;
-}
-.form-block .form-block__send {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.form-block .form-block__send .form-block__button {
-  border-radius: 3px;
-  padding: 15px 35px;
-  text-align: center;
-  color: #fff;
-  background: #148d93;
-  font-size: 18px;
-  line-height: 22px;
-  width: 200px;
-}
-.form-block .form-block__send .form-block__policy {
-  color: red;
-}
-.form-block .form-block__send .form-block__division {
-  padding-top: 35px;
-  padding-bottom: 35px;
-  font-weight: 600;
-  font-size: 22px;
-  line-height: 30px;
-  text-transform: uppercase;
-  color: #fff;
-}
-.form-block .form-block__send .form-block__checkbox {
-  padding-bottom: 13px;
-  color: grey;
-}
-
-.form-block__button.disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
-.active {
-  border-left: 3px solid #05bbc4;
-  background: #565b69;
-}
-
-.active:before {
-  position: absolute;
-  width: 22px;
-  height: 22px;
-  content: "";
-  right: 20px;
-  background-color: #05bbc4;
-  border-radius: 50%;
-  background-image: url("../images/done1.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-.visible {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity, 0.5s ease;
-}
-
-.display {
-  opacity: 0;
-  transition: opacity, 0.2s ease;
-  display: none;
-}
-
-.small {
-  border-radius: 4px !important;
-  height: 40px !important;
-  transition: height, border-radius, 0.5s ease;
-}
-
-.small-ul {
-  height: 0px !important;
-  transition: height, opacity, margin 0.5s ease;
-  opacity: 0;
-  margin: 0;
-}
-
-.input-second-block {
-  border-radius: 3px !important;
-  border-bottom: none !important;
-  background-color: #555659 !important;
-  transition: border-radius, background-color, border, 0.5s ease;
-}
-
-.title-get-second-block {
-  text-align: end !important;
-  display: block !important;
-  border-radius: 4px !important;
-  margin-bottom: 31px !important;
-  margin-top: -20px !important;
-  transition: border-radius, margin-bottom, margin-top 0.5s ease;
-  text-transform: uppercase;
-}
-
-.title-give-second-block {
-  display: block !important;
-  border-radius: 4px !important;
-  margin-bottom: 30px !important;
-  margin-top: -20px !important;
-  transition: border-radius, margin-bottom, margin-top 0.5s ease;
-  text-transform: uppercase;
-}
-
-@media (min-width: 1200px) {
-  .converter-block-side {
-    flex-basis: 520px;
-  }
-  .form-block {
-    min-width: 1060px;
-  }
-}
-@media (max-width: 1200px) {
-  .converter-block-side {
-    flex-basis: 430px;
-  }
-  .form-block {
-    min-width: 880px;
-  }
-}
-@media (max-width: 992px) {
-  .converter-block-side {
-    flex-basis: 310px;
-  }
-  .form-block {
-    min-width: 640px;
-  }
-}
-@media (max-width: 674px) {
-  .converter-block-side {
-    flex-basis: 210px;
-  }
-  .converter-block .converter-block-side .converter-button-container {
+     .small-give__label {
+    height: 30px;
     display: flex;
-    justify-content: center;
-    padding: 0 15px;
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  .form-block {
-    min-width: 440px;
-  }
-}
-@media (max-width: 474px) {
-  .converter-block-side {
-    flex-basis: 146px;
-  }
-  .converter-block-side .converter-button {
-    width: 146px;
-    padding: 7px 12px;
-  }
-  .converter-block-side .side-title {
-    text-align: center;
-    width: 100%;
-    padding: 15px 0px;
-  }
-  .converter-block-side .converter-get-title {
-    padding: 15px 0px;
-  }
-  .converter-block .converter-block-side .side-title {
+    align-items: center;
+    font-weight: 400;
     font-size: 25px;
     line-height: 80%;
-    color: #FFFFFF;
-    margin-bottom: 17px;
-    padding: 15px 0;
-    display: inline-block;
-    background: #3e4046;
-    margin-top: -10px;
-    border-radius: 10px;
-  }
-  .converter-block .converter-block-side .converter-button-container .converter-button {
-    cursor: pointer;
-    padding: 10px 8px;
-    border-radius: 3px;
-    background: #148d93;
-    font-size: 18px;
-    line-height: 22px;
-  }
-  .form-block {
-    min-width: 302px;
-  }
+    color: white;
+    position: absolute;
+    right: 42px;
 }
-@media (max-width: 346px) {
-  .converter-block {
-    gap: 5px;
-  }
-  .converter-block-side {
-    flex-basis: 140px;
-  }
+.small-give__label img {
+  height: 30px;
+  margin: 0 7px;
 }
-
+.small-get__label {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 80%;
+    color: white;
+    position: absolute;
+    right: 15px;
+}
+.small-get__label img {
+  height: 30px;
+  margin: 0 7px;
+}
+.small {
+    border-radius: 4px !important;
+    height: 40px !important;
+    transition: height, border-radius, 0.5s ease;
+    padding-bottom: 141px !important;
+}
 
     </style>
+    <link rel="stylesheet" href="https://www.konvert.gg/wp-content/uploads/converter/css/styles9.css">
     <div class="wrapper converter-wrapper">
         <div class="block converter-block">
             <div class="block converter-block-side converter-give">
-                <div class="converter-give-title side-title">Отдаёте</div>
+                <div id="converter-give-title" class="side-title">Отдаёте</div>
                 <div class="converter-input__give converter-input">
                     <div id="input-give__label" class="input-give__label">USDT</div>
                     <input id="input-give-amount" class="" type="text">
@@ -737,51 +252,52 @@ body {
         </div>
         <div class="block form-block">
             <Form id="MyForm">
-                <div class="form-block__title">ВВОД ДАННЫХ</div>
                 <div class="form-block__form">
                     <div class="form-block__left">
                         <div class="form-block__data">
-                            <input class="form-block__input" id="name" placeholder="ФИО" type="name" required>
+                            <label for="name">Ваше ФИО латиницей</label>
+                            <input class="form-block__input" id="name" placeholder="Ivanov Ivan Ivanovich" type="name" required>
                         </div>
                         <div class="form-block__data">
-                            <input class="form-block__input" id="tel" placeholder="номер телефона" type="tel" required>
+                            <label for="tel">Ваш номер телефона:</label>
+                            <input class="form-block__input" id="tel" placeholder="+ХХХ…" type="tel" required>
                         </div>
                         <div class="form-block__data">
+                            <label for="card-number">Карта, на которую вы хотите получить выбранную валюту.</label>
                             <input class="form-block__input"
-                                placeholder="карта на которую нужно вывести итоговую валюту" pattern="[0-9]{16}" id="card-number" name="card-number" type="card-number" required>
+                                placeholder="Для получения наличных укажите город, страну" id="card-number" name="card-number" type="card-number" required>
                         </div>
                     </div>
                     <div class="form-block__right"> 
                         <div class="form-block__data">
                             <div class="form-block__messenger-title">удобный менеджер для связи</div>
                             <div class="form-block__messenger-list">
-                                <div class="form-block__messenger"><img src="./converter/images/whatsapp.svg" alt=""><input
+                                <div class="form-block__messenger"><img src="https://www.konvert.gg/wp-content/uploads/converter/images/whatsapp.svg" alt=""><input
                                         type="checkbox" id="myCheckboxWhatsapp" name="messenger"><label
-                                        for="myCheckboxWhatsapp"></label></div>
-                                <div class="form-block__messenger"><img src="./converter/images/telegram.svg" alt=""><input
+                                        for="myCheckboxWhatsapp" required></label></div>
+                                <div class="form-block__messenger"><img src="https://www.konvert.gg/wp-content/uploads/converter/images/telegram.svg" alt=""><input
                                         type="checkbox" id="myCheckboxTelegram" name="messenger"><label
-                                        for="myCheckboxTelegram"></label></div>
-                                <div class="form-block__messenger"><img src="./converter/images/viber.svg" alt=""><input
+                                        for="myCheckboxTelegram" required></label></div>
+                                <div class="form-block__messenger"><img src="https://www.konvert.gg/wp-content/uploads/converter/images/viber.svg" alt=""><input
                                         type="checkbox" id="myCheckboxViber" name="messenger"><label
-                                        for="myCheckboxViber"></label></div>
+                                        for="myCheckboxViber" required></label></div>
                             </div>
-                        </div>
-                        <div class="form-block__data"> <input class="form-block__input" id="comments" placeholder="комментарии"
-                                type="text">
                         </div>
                     </div>
                 </div>
                 <div class="form-block__send">
                     <div class="form-block__checkbox"> <input type="checkbox"> Я соглашаюсь с <span
                             class="form-block__policy"><a>Политикой</a></span></div>
-                    <div class="form-block__button disabled" id="submit-btn">Отправить заявку</div>
+                    <div type="submit" class="form-block__button disabled" id="submit-btn" value="Отправить заявку">Отправить заявку</div>
                     <div class="form-block__division">ЛИБО</div>
-                    <div class="form-block__button disabled">Помощь менеджера</div>
+                    <a class="form-block__help" href="https://t.me/Konvert_Main" target="_blank"><div class="form-block__button">Помощь менеджера</div></a>
                 </div>
             </Form>
         </div>
     </div>
-    <script></script>
+    <script src="https://www.konvert.gg/wp-content/uploads/converter/js/form.js"></script>
+    <script src="https://www.konvert.gg/wp-content/uploads/converter/js/converter.js"></script>
+    <script src="https://www.konvert.gg/wp-content/uploads/converter/js/buttons.js"></script>
     <?php
     $output = ob_get_clean();
     return $output;
