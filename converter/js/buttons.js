@@ -101,6 +101,7 @@ converterActionButton?.addEventListener('click', () => {
                 messengerCheckboxes.forEach((otherCheckbox) => {
                     if (otherCheckbox !== checkbox && otherCheckbox !== document.getElementById("myCheckboxOther")) {
                         otherCheckbox.checked = false;
+                        otherCheckbox.removeAttribute("required")
                     }
                 });
             }

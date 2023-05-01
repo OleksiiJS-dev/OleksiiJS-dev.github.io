@@ -76,7 +76,7 @@
         </div>
         <div class="block form-block">
             <Form id="MyForm">
-                <div class="form-block__title">ВВОД ДАННЫХ</div>
+                <div class="form-block__title">Дополнительная информация о заявке</div>
                 <div class="form-block__form">
                     <div class="form-block__left">
                         <div class="form-block__data">
@@ -88,42 +88,42 @@
                             <input class="form-block__input" id="tel" placeholder="+ХХХ…" type="tel" required>
                         </div>
                         <div class="form-block__data">
-                            <label for="card-number">Карта, на которую вы хотите получить выбранную валюту.</label>
+                            <label for="card-number">Карта, на которую вы хотите получить выбранную валюту</label>
                             <input class="form-block__input"
                                 placeholder="Для получения наличных укажите город, страну" id="card-number" name="card-number" type="card-number" required>
                         </div>
                     </div>
                     <div class="form-block__right"> 
-                        <div class="form-block__data form-block__data__massenger ">
-                            <div class="form-block__messenger-title">Удобный менеджер для связи</div>
+                        <div class="form-block__data form-block__data__messenger ">
+                            <label for="messenger" class="form-block__messenger-title">Удобный менеджер для связи</label>
                             <div class="form-block__messenger-list">
                                 <div class="form-block__messenger"><img src="./converter/images/whatsapp.svg" alt=""><input
-                                        type="checkbox" id="myCheckboxWhatsapp" name="messenger"><label
-                                        for="myCheckboxWhatsapp" required></label></div>
+                                        type="checkbox" id="myCheckboxWhatsapp" name="messenger" required><label
+                                        for="myCheckboxWhatsapp" ></label></div>
                                 <div class="form-block__messenger"><img src="./converter/images/telegram.svg" alt=""><input
-                                        type="checkbox" id="myCheckboxTelegram" name="messenger"><label
-                                        for="myCheckboxTelegram" required></label></div>
+                                        type="checkbox" id="myCheckboxTelegram" name="messenger" required><label
+                                        for="myCheckboxTelegram" ></label></div>
                                 <div class="form-block__messenger"><img src="./converter/images/viber.svg" alt=""><input
-                                        type="checkbox" id="myCheckboxViber" name="messenger"><label
-                                        for="myCheckboxViber" required></label></div>
+                                        type="checkbox" id="myCheckboxViber" name="messenger" required><label
+                                        for="myCheckboxViber" ></label></div>
                             </div>
                         </div>
                         <div class="form-block__data">
-                            <label for="promocode">Введите промокод</label>
+                            <label for="promocode">Промокод Необязательно</label>
                             <input class="form-block__input"
-                                placeholder="Промокод" id="promocode" name="promocode" type="promocode">
+                                placeholder="Необязательно" id="promocode" name="promocode" type="promocode">
                         </div>
                         <div class="form-block__data">
-                            <label for="commentary">Введите комментарий</label>
+                            <label for="commentary">Комментарии Необязательно</label>
                             <input class="form-block__input"
-                                placeholder="Комментарий" id="commentary" name="commentary" type="commentary">
+                                placeholder="Необязательно" id="commentary" name="commentary" type="commentary">
                         </div>
                     </div>
                 </div>
                 <div class="form-block__send">
                     <div class="form-block__checkbox"> <input type="checkbox"> Я соглашаюсь с <span
                             class="form-block__policy"><a>Политикой</a></span></div>
-                    <div type="submit" class="form-block__button disabled" id="submit-btn" value="Отправить заявку">Отправить заявку</div>
+                    <button type="submit" class="form-block__button disabled" id="submit-btn" value="Отправить заявку">Отправить заявку</button>
                     <div class="form-block__division">ЛИБО</div>
                     <a class="form-block__help" href="https://t.me/Konvert_Main" target="_blank"><div class="form-block__button">Помощь менеджера</div></a>
                 </div>
