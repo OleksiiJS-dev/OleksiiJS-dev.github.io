@@ -58,8 +58,9 @@ const symbols = [
 for (let i = 0; i < symbols.length; i++) {
   const li = document.createElement('li');
 
-  li.value = symbols[i].name
+  li.value = '';
   li.innerHTML = `<span class="converter-give-currency__icon"><img src="${symbols[i].image}" alt="${symbols[i].name}"></span><span class="converter-give-currency__name">${symbols[i].name}</span>`;
+  
   if (li.innerHTML === `<span class="converter-give-currency__icon"><img src="${symbols[i].image}" alt="USDT"></span><span class="converter-give-currency__name">USDT</span>`) {
     li.classList.add("active")
   }

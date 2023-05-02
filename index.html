@@ -37,11 +37,7 @@
   height: 30px;
   margin: 0 7px;
 }
-.small {
-    border-radius: 4px !important;
-    height: 40px !important;
-    transition: height, border-radius, 0.5s ease;
-}
+
 
     </style>
     <title>Document</title>
@@ -72,10 +68,10 @@
                     <div id="converter-button" class="converter-button">Продолжить</div>
                 </div>
             </div>
-            <div id="" class="converter-button__reverse"></div>
+            <div id="converter-button__reverse" class="converter-button__reverse"></div>
         </div>
         <div class="block form-block">
-            <Form id="MyForm">
+            <Form id="MyForm" >
                 <div class="form-block__title">Дополнительная информация о заявке</div>
                 <div class="form-block__form">
                     <div class="form-block__left">
@@ -84,7 +80,7 @@
                             <input class="form-block__input" id="name" placeholder="Ivanov Ivan Ivanovich" type="name" required>
                         </div>
                         <div class="form-block__data">
-                            <label for="tel">Ваш номер телефона:</label>
+                            <label for="tel">Ваш номер телефона</label>
                             <input class="form-block__input" id="tel" placeholder="+ХХХ…" type="tel" required>
                         </div>
                         <div class="form-block__data">
@@ -109,19 +105,19 @@
                             </div>
                         </div>
                         <div class="form-block__data">
-                            <label for="promocode">Промокод Необязательно</label>
+                            <label for="promocode">Промокод</label>
                             <input class="form-block__input"
                                 placeholder="Необязательно" id="promocode" name="promocode" type="promocode">
                         </div>
                         <div class="form-block__data">
-                            <label for="commentary">Комментарии Необязательно</label>
+                            <label for="commentary">Комментарии</label>
                             <input class="form-block__input"
                                 placeholder="Необязательно" id="commentary" name="commentary" type="commentary">
                         </div>
                     </div>
                 </div>
                 <div class="form-block__send">
-                    <div class="form-block__checkbox"> <input type="checkbox"> Я соглашаюсь с <span
+                    <div class="form-block__checkbox"> <input type="checkbox" required> Я соглашаюсь с <span
                             class="form-block__policy"><a>Политикой</a></span></div>
                     <button type="submit" class="form-block__button disabled" id="submit-btn" value="Отправить заявку">Отправить заявку</button>
                     <div class="form-block__division">ЛИБО</div>
@@ -130,7 +126,7 @@
             </Form>
         </div>
     </div>
-    <script src="./converter/js/sendForm.js"></script>
+    <script src="./converter/js/form.js"></script>
     <script src="./converter/js/converter.js"></script>
     <script src="./converter/js/buttons.js"></script>
 </body>
