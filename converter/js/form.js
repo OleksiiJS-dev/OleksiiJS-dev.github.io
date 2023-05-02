@@ -1,91 +1,104 @@
-// // 1
-// const formNumberOfApplication = 8888 8888;
-// // 2
-// const formData = new Date();
-// // 3
-// const formReceiveLocation = 'Сайт'
-// // 4
-// const formStatus = 'Новая'
-// // 5 
-// const formName = document
-// // 6
-// const formTel = document
-// // 7
-// const formCard = 
-// // 8
-// const formSell = 
-// // 9
-// const formBuy = 
-// // 10
-// const formSellCurrency = 
-// // 11
-// const formBuyCurrency = 
-// // 12
-// const formCurrencyRate = rates ...
-// // 13
-// const formTg = ''
-// // 14
-// const formMassenger = document
-// // 15
-// const formPromocode = document
-// // 16
-// const formCommentary = document
-console.log("mmm")
+// @ts-nocheck
 
-const form = document.getElementById('myForm');
+const form = document.getElementById('MyForm');
+
+
+function getRandomEightDigitNumberWithLeadingZeros() {
+    const min = 0;
+    const max = 99999999;
+    const randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
+    const randomNumberWithLeadingZeros = String(randomNumber).padStart(8, '0');
+    return randomNumberWithLeadingZeros;
+}
+const randomEightDigitNumberWithLeadingZeros = getRandomEightDigitNumberWithLeadingZeros();
+
+function formatDate(date) {
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const year = date.getFullYear();
+
+    return `${day}.${month}.${year}`;
+}
+const currentDate = new Date();
 
 form?.addEventListener('submit', (event) => {
-  event.preventDefault(); // Отмена отправки формы и изменения адреса
+    event.preventDefault();
 
+    const formNumber = randomEightDigitNumberWithLeadingZeros;
 
-  console.log("asdll")
+    const formData = formatDate(currentDate);
 
-  // 1
-const formNumber = 88888888;
-// 2
-const formData = new Date();
-// 3
-const formReceiveLocation = 'Сайт'
-// 4
-const formStatus = 'Новая'
-// 5 
-const formName = document
-// 6
-const formTel = document
-// 7
-// const formCard = 
-// // 8
-// const formSell = 
-// // 9
-// const formBuy = 
-// // 10
-// const formSellCurrency = 
-// // 11
-// const formBuyCurrency = 
-// // 12
-// const formCurrencyRate = rates ...
-// // 13
-// const formTg = ''
-// // 14
-// const formMassenger = document
-// // 15
-// const formPromocode = document
-// // 16
-// const formCommentary = document
+    const formReceiveLocation = 'Сайт';
 
-  // Отправка данных на сервер с помощью AJAX (пример: использование Fetch API)
-  fetch('https://script.google.com/macros/s/AKfycbyTNT0I1RTVo0ZR-X_hRoARu_5tqLrR2KHIiGFXWW17bBkyHM-wK0wqJYGArQi_TkJ_MQ/exec', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ data: formNumber }),
-  })
-    .then((response) => response.json())
-    .then((result) => {
-      console.log('Ответ сервера:', result);
+    const formStatus = 'Новая';
+
+    const formManager = '';
+
+    const name = document.getElementById('name');
+    const formName = name.value;
+
+    const tel = document.getElementById('tel');
+    const formTel = tel.value;
+
+    const card = document.getElementById('card-number');
+    const formCard = card.value;
+
+    const give = document.getElementById("input-give-amount");
+    const formGive = give.value;
+
+    const get = document.getElementById("input-get-amount");
+    const formGet = get.value;
+
+    const giveCurr = document.getElementById("input-give__label");
+    const formGiveCurr = giveCurr?.textContent;
+
+    const getCurr = document.getElementById("input-get__label");
+    const formGetCurr = getCurr?.textContent;
+
+    const promocode = document.getElementById("promocode");
+    if (!promocode.value) {
+        promocode.value = ''
+    }
+    const formPromocode = promocode.value;
+
+    const formTelegram = '';
+
+    const commentary = document.getElementById("commentary");
+    if (!commentary.value) {
+        commentary.value = ''
+    }
+    const formCommentary = commentary.value;
+
+    fetch('https://script.google.com/macros/s/AKfycbwu0Qhpv4tPUZSN4nGRpdD9W4xZdYk_R1tMz4_PhGA5z54hyNYub4Xjfk2KQujNMDFaBw/exec', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            formNumber: formNumber,
+            formData: formData,
+            formReceiveLocation: formReceiveLocation,
+            formStatus: formStatus,
+            formManager: formManager,
+            formName: formName,
+            formTel: formTel,
+            formCard: formCard,
+            formGive: formGive,
+            formGet: formGet,
+            formGiveCurr: formGiveCurr,
+            formGetCurr: formGetCurr,
+            formPromocode: formPromocode,
+            formTelegram: formTelegram,
+            formCommentary: formCommentary,
+        })
     })
-    .catch((error) => {
-      console.error('Ошибка при отправке данных:', error);
-    });
+        .then((response) => response.json())
+        .then((result) => {
+            console.log('Ответ сервера:', result);
+        })
+        .catch((error) => {
+            console.error('Ошибка при отправке данных:', error);
+        })
 });
+
+
