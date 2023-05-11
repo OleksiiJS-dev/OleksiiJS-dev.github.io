@@ -9,7 +9,11 @@
     flex-direction: column;
     padding-top: 22px;
     overflow: hidden;
-    height: 895px;
+    height: 100%;
+}
+
+.wrapper__second {
+    height: 850px;
 }
 
 .converter-block {
@@ -326,7 +330,7 @@
         }
 
         .form-block__messenger-title {
-            padding-bottom: 25px;
+            padding-bottom: 11px;
         }
 
         .form-block__messenger-list {

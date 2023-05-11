@@ -69,11 +69,12 @@ form?.addEventListener('submit', (event) => {
     }
     const formCommentary = commentary.value;
 
-    fetch('https://script.google.com/macros/s/AKfycbwu0Qhpv4tPUZSN4nGRpdD9W4xZdYk_R1tMz4_PhGA5z54hyNYub4Xjfk2KQujNMDFaBw/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbypuPcAakGttdj6SUsUu3hXMZ_VgfZAgIi32xtrDZgTKFBlMFUu8Zlpq17fSP0gWWuM/exec', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
+        mode: "no-cors",
         body: JSON.stringify({
             formNumber: formNumber,
             formData: formData,
@@ -90,6 +91,7 @@ form?.addEventListener('submit', (event) => {
             formPromocode: formPromocode,
             formTelegram: formTelegram,
             formCommentary: formCommentary,
+            
         })
     })
         .then((response) => response.json())

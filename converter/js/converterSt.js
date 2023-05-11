@@ -7,6 +7,7 @@ let giveCurrency = 'USDT';
 let getCurrency = 'USDT';
 let exchangeRateApi = `${giveCurrency}${getCurrency}`;
 let rates = '';
+let formCurrency = ''
 const giveCurrencyAmount = document.getElementById('input-give-amount');
 const getCurrencyAmount = document.getElementById('input-get-amount');
 giveCurrencyAmount.placeholder = 1;
@@ -79,14 +80,19 @@ const currencyFunctionInput = (a, b) => {
   const input1 = document.getElementById("input-give-amount");
   const input2 = document.getElementById('input-get-amount');
   if (input1.value < 500) {  
+    formCurrency = rates[`${b}`][0];
     input2.value = (input1.value * rates[`${b}`][0]).toFixed(3);
   } else if (input1.value < 999) {  
+    formCurrency = rates[`${b}`][1];
     input2.value = (input1.value * rates[`${b}`][1]).toFixed(3);
   } else if (input1.value < 4999) {  
+    formCurrency = rates[`${b}`][2];
     input2.value = (input1.value * rates[`${b}`][2]).toFixed(3);
   } else if (input1.value < 9999) {  
+    formCurrency = rates[`${b}`][3];
     input2.value = (input1.value * rates[`${b}`][3]).toFixed(3);
   } else if (input1.value >= 10000) {
+    formCurrency = rates[`${b}`][4];
     input2.value = (input1.value * rates[`${b}`][4]).toFixed(3);
   }
 }
@@ -94,14 +100,19 @@ const currencyFunctionOutput = (a, b) => {
   const input1 = document.getElementById("input-give-amount");
   const input2 = document.getElementById('input-get-amount');
   if (input2.value < 500) {
+    formCurrency = rates[`${b}`][0];
     input1.value = (input2.value / rates[`${b}`][0]).toFixed(3);
   } else if (input2.value < 999) {
+    formCurrency = rates[`${b}`][1];
     input1.value = (input2.value / rates[`${b}`][1]).toFixed(3);
   } else if (input2.value < 4999) {
+    formCurrency = rates[`${b}`][2];
     input1.value = (input2.value / rates[`${b}`][2]).toFixed(3);
   } else if (input2.value < 9999) {
+    formCurrency = rates[`${b}`][3];
     input1.value = (input2.value / rates[`${b}`][3]).toFixed(3);
   } else if (input2.value >= 10000) {
+    formCurrency = rates[`${b}`][4];
     input1.value = (input2.value / rates[`${b}`][4]).toFixed(3);
   }
 }

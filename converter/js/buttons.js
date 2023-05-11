@@ -99,9 +99,10 @@ converterActionButton?.addEventListener('click', () => {
     checkbox.addEventListener('change', (event) => {
       if (event.target.checked) {
         messengerCheckboxes.forEach((otherCheckbox) => {
-          if (otherCheckbox !== checkbox && otherCheckbox !== document.getElementById("myCheckboxOther")) {
+          if (otherCheckbox !== checkbox) {
             otherCheckbox.checked = false;
             otherCheckbox.removeAttribute("required")
+            event.target.setAttribute('required', '');
           }
         });
       }
