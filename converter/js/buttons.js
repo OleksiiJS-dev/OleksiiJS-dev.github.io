@@ -110,11 +110,7 @@ converterActionButton?.addEventListener('click', () => {
   });
 
   checkbox.addEventListener('change', function () {
-    if (checkbox.checked) {
-      submitButton.classList.remove('disabled');
-    } else {
-      submitButton.classList.add('disabled');
-    }
+    checkboxChange()
   });
 })
 
@@ -135,6 +131,32 @@ buttonReverse?.addEventListener('click', function () {
   const reverseGiveElem = Array.from(allGiveElem).find(item => item.textContent === activeGetCurrencyElem?.textContent);
   const reverseGetElem = Array.from(allGetElem).find(item => item.textContent === activeGiveCurrencyElem?.textContent);
 
+  const currencyFunctionSwitch = (a, b) => {
+    const input1 = document.getElementById("input-give-amount");
+    const input2 = document.getElementById('input-get-amount');
+    if (input2.value < 500) {
+      formCurrency = rates[`${b}`][0];
+      input1.value = input2.value;
+      input2.value = (input1.value * rates[`${b}`][0]).toFixed(3);
+    } else if (input2.value < 999) {
+      formCurrency = rates[`${b}`][1];
+      input1.value = input2.value;
+      input2.value = (input1.value * rates[`${b}`][1]).toFixed(3);
+    } else if (input2.value < 4999) {
+      formCurrency = rates[`${b}`][2];
+      input1.value = input2.value;
+      input2.value = (input1.value * rates[`${b}`][2]).toFixed(3);
+    } else if (input2.value < 9999) {
+      formCurrency = rates[`${b}`][3];
+      input1.value = input2.value;
+      input2.value = (input1.value * rates[`${b}`][3]).toFixed(3);
+    } else if (input2.value >= 10000) {
+      formCurrency = rates[`${b}`][4];
+      input1.value = input2.value;
+      input2.value = (input1.value * rates[`${b}`][4]).toFixed(3);
+    }
+  }
+
   if (reverseGiveElem && reverseGetElem) {
     reverseGiveElem.classList.add('active')
     reverseGetElem.classList.add('active')
@@ -143,9 +165,19 @@ buttonReverse?.addEventListener('click', function () {
     const temp = inputGetLabel.innerHTML;
     inputGetLabel.innerHTML = inputGiveLabel.innerHTML;
     inputGiveLabel.innerHTML = temp;
-    const temp2 = inputGetAmount.value;
-    inputGetAmount.value = inputGiveAmount.value
-    inputGiveAmount.value = temp2
-  } 
+    giveCurrency = reverseGiveElem.textContent
+    getCurrency = reverseGetElem.textContent
+    exchangeRateApi = `${giveCurrency}${getCurrency}`
+    currencyFunctionSwitch(rates, exchangeRateApi)
+    console.log(exchangeRateApi, reverseGiveElem.textContent, giveCurrency, reverseGetElem.textContent, getCurrency, formCurrency)
+  }
+  console.log()
 })
 
+const checkboxChange = () => {
+  if (checkbox.checked) {
+    submitButton.classList.remove('disabled');
+  } else {
+    submitButton.classList.add('disabled');
+  }
+}

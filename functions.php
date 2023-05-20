@@ -275,15 +275,15 @@ ob_start();
                     <div class="form-block__data">
                         <div class="form-block__messenger-title">Удобный менеджер для связи</div>
                             <div class="form-block__messenger-list">
-                                <div class="form-block__messenger"><img src="https://www.konvert.gg/wp-content/uploads/converter/images/whatsapp.svg" alt=""><input
-                                        type="checkbox" id="myCheckboxWhatsapp" name="messenger" required><label
-                                        for="myCheckboxWhatsapp" ></label></div>
-                                <div class="form-block__messenger"><img src="https://www.konvert.gg/wp-content/uploads/converter/images/telegram.svg" alt=""><input
-                                        type="checkbox" id="myCheckboxTelegram" name="messenger" required><label
-                                        for="myCheckboxTelegram" ></label></div>
-                                <div class="form-block__messenger"><img src="https://www.konvert.gg/wp-content/uploads/converter/images/viber.svg" alt=""><input
-                                        type="checkbox" id="myCheckboxViber" name="messenger" required><label
-                                        for="myCheckboxViber" ></label></div>
+                                <div class="form-block__messenger"><img src="https://www.konvert.gg/wp-content/uploads/converter/images/whatsapp.svg" alt="">
+                                    <input type="checkbox" id="myCheckboxWhatsapp" name="messenger" required>
+                                    <label for="myCheckboxWhatsapp" ></label></div>
+                                <div class="form-block__messenger"><img src="https://www.konvert.gg/wp-content/uploads/converter/images/telegram.svg" alt="">
+                                    <input type="checkbox" id="myCheckboxTelegram" name="messenger" required>
+                                    <label for="myCheckboxTelegram" ></label></div>
+                                <div class="form-block__messenger"><img src="https://www.konvert.gg/wp-content/uploads/converter/images/viber.svg" alt="">
+                                    <input type="checkbox" id="myCheckboxViber" name="messenger" required>
+                                    <label for="myCheckboxViber" ></label></div>
                         </div>
                     </div>
                     <div class="form-block__data">
@@ -308,6 +308,14 @@ ob_start();
         </Form>
     </div>
 </div>
+<div class="popup popup-hidden">
+        <p class="popup-header">
+            ВАША ЗАЯВКА ПРИНЯТА
+        </p>
+        <p class="popup-content">
+            Ожидайте, с вами свяжется менеджер для уточнения деталей
+        </p>
+    </div>
     <script src="https://www.konvert.gg/wp-content/uploads/converter/js/converterSt.js"></script>
     <script src="https://www.konvert.gg/wp-content/uploads/converter/js/formPostSt.js"></script>
     <script src="https://www.konvert.gg/wp-content/uploads/converter/js/buttons.js"></script>
