@@ -150,43 +150,73 @@ form?.addEventListener('submit', (event) => {
 📞 Мессенджер: ${setFormMessenger()}
 🔖 Комментарий: ${setFormCommentary()}
 `
-popup.classList.remove("popup-hidden")
-wrapper.classList.add("wrapper-filter")
-setTimeout(function () {
-    popup.classList.add("popup-hidden")
-    wrapper.classList.remove("wrapper-filter")
-}, 2000)
-console.log(message)
-const telegramBotToken = '6044229590:AAE14BzmF942S9Cf2dcccBbdAGwew8nklZc';
-const chatId = '-1001522353086';
-const url = `https://api.telegram.org/bot${telegramBotToken}/sendMessage`;
-const options = {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    // mode: "no-cors",
-    body: JSON.stringify({
-        chat_id: chatId,
-        text: message,
-        reply_markup: {
-            inline_keyboard: [
-                [{ text: '🟢 Взять в работу', callback_data: 'button_pressed' }]
-            ]
-        }
-    })
-};
+    popup.classList.remove("popup-hidden")
+    wrapper.classList.add("wrapper-filter")
+    setTimeout(function () {
+        popup.classList.add("popup-hidden")
+        wrapper.classList.remove("wrapper-filter")
+    }, 2000)
+    const telegramBotToken = '6044229590:AAE14BzmF942S9Cf2dcccBbdAGwew8nklZc';
+    const chatId = '-1001522353086';
+    const sendMessageUrl = `https://api.telegram.org/bot${telegramBotToken}/sendMessage`;
+    let messageId
+    const sendMessageOptions = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        // mode: "no-cors",
+        body: JSON.stringify({
+            chat_id: chatId,
+            text: message,
+            reply_markup: {
+                inline_keyboard: [
+                    [{ text: '🟢 Взять в работу', callback_data: 'button_pressed' }]
+                ]
+            }
+        })
+    };
+    fetch(sendMessageUrl, sendMessageOptions)
+        .then(response => {
+            if (response.ok) {
+                console.log('Message sent successfully');
+                return response.json();
+            } else {
+                throw new Error('Error sending message');
+            }
+        })
+        .then(data => {
+            console.log(data, data.result.message_id);
+            messageId = data.result.message_id;
+        
+            const pinMessageOptions = {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                chat_id: chatId,
+                message_id: messageId,
+                // disable: false
+              })
+            };
+            const pinMessageUrl = `https://api.telegram.org/bot${telegramBotToken}/pinChatMessage`;
 
-fetch(url, options)
-    .then(response => {
-        if (response.ok) {
-            console.log('Message sent successfully');
-        } else {
-            console.error('Error sending message');
-        }
-    })
-    .then(clearForm())
-    .catch(error => {
-        console.error('Error sending message', error);
-    });
+            fetch(pinMessageUrl, pinMessageOptions)
+              .then(response => {
+                if (response.ok) {
+                  console.log('Message pinned successfully');
+                } else {
+                  throw new Error('Error pinning message');
+                }
+              })
+              .catch(error => {
+                console.error('Error pinning message', error);
+              });
+          })
+        .catch(error => {
+            console.error('Error sending message', error);
+        });
+
 });
+

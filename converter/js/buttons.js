@@ -63,6 +63,7 @@ converterActionButton?.addEventListener('click', () => {
   const inputGetLabel = document.getElementById("input-get__label");
   const inputGiveLabel = document.getElementById("input-give__label");
 
+  buttonReverse.classList.add("small-reverse")
   converterActionButton.classList.add("display");
   converterBlockSide?.classList.add("small");
   converterGet?.classList.add("small");
