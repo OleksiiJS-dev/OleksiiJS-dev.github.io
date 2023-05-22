@@ -480,9 +480,18 @@
 }
 
 .wrapper-filter {
-  filter: blur(1px);
+  filter: blur(2px);
 }
 
+.popup-close{
+  padding: 10px;
+  text-align: end;
+  height: 11px;
+}
+.popup-close .popup-cross {
+  height: 50px;
+  fill: #FFFFFF;
+}
 @media (min-width: 1200px) {
   .converter-block-side {
     flex-basis: 520px;
@@ -577,12 +586,16 @@
     height: 189px;
   }
   .popup .popup-header {
-    padding-top: 22px;
+    padding-top: 11px;
     font-size: 28px;
   }
   .popup .popup-content{
-    padding: 11px;
+    padding: 0px;
     font-size: 24px;
+  }
+  .popup-close .popup-cross  {
+    height: 38px;
+    fill: #FFFFFF;
   }
 }
 @media (max-width: 674px) {

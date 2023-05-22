@@ -56,6 +56,17 @@ const checkbox = document.querySelector('.form-block__checkbox input');
 const submitButton = document.querySelector('.form-block__button');
 const messengerCheckboxes = document.querySelectorAll('input[name="messenger"]');
 const formBlock = document.querySelector(".form-block");
+const popupClick = document.getElementById("popup-click")
+
+const popupClose = () => {
+        popup.classList.add("popup-hidden")
+        wrapper.classList.remove("wrapper-filter")
+        clearForm()
+}
+
+popupClick.addEventListener("click", ()=>{
+  popupClose()
+})
 
 converterActionButton?.addEventListener('click', () => {
   const activeElementGive = document.querySelector('#converter-give-currency li.active');

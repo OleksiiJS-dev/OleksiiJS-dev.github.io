@@ -152,10 +152,10 @@ form?.addEventListener('submit', (event) => {
 `
     popup.classList.remove("popup-hidden")
     wrapper.classList.add("wrapper-filter")
-    setTimeout(function () {
-        popup.classList.add("popup-hidden")
-        wrapper.classList.remove("wrapper-filter")
-    }, 2000)
+    // setTimeout(function () {
+    //     popup.classList.add("popup-hidden")
+    //     wrapper.classList.remove("wrapper-filter")
+    // }, 2000)
     const telegramBotToken = '6044229590:AAE14BzmF942S9Cf2dcccBbdAGwew8nklZc';
     const chatId = '-1001522353086';
     const sendMessageUrl = `https://api.telegram.org/bot${telegramBotToken}/sendMessage`;
