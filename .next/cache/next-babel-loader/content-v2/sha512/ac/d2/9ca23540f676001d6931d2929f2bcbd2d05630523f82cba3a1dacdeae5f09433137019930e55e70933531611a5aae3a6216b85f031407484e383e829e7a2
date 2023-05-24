@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { jsx as _jsx } from \"react/jsx-runtime\";\nimport NotFound from '../src/components/NotFound/NotFound';\n\nconst Error = () => {\n  return /*#__PURE__*/_jsx(NotFound, {});\n};\n\nexport default Error;","map":null,"metadata":{},"sourceType":"module"}
