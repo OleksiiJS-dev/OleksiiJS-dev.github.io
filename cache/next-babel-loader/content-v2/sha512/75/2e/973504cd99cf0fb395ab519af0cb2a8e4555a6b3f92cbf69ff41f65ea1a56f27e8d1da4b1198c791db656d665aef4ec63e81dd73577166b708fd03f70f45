@@ -1,1 +1,0 @@
-{"ast":null,"code":"import getPromocode from '../../backendHelpers/getPromocode';\nexport default (async (req, res) => {\n  const promocodes = await getPromocode(req.body);\n  res.status(200).json({\n    discount: promocodes.length ? promocodes[0] : null\n  });\n});","map":null,"metadata":{},"sourceType":"module"}

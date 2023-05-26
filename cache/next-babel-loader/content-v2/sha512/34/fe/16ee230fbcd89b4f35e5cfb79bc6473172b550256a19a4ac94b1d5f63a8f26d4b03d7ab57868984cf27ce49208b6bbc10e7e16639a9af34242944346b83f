@@ -1,1 +1,0 @@
-{"ast":null,"code":"import sgMail from '@sendgrid/mail';\nsgMail.setApiKey(process.env.SENDGRID_API_KEY);\nexport default sgMail;","map":null,"metadata":{},"sourceType":"module"}

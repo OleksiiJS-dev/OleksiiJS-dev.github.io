@@ -1,1 +1,0 @@
-{"ast":null,"code":"export let ECurrency;\n\n(function (ECurrency) {\n  ECurrency[ECurrency[\"UAH\"] = 0] = \"UAH\";\n  ECurrency[ECurrency[\"EUR\"] = 1] = \"EUR\";\n  ECurrency[ECurrency[\"USD\"] = 2] = \"USD\";\n})(ECurrency || (ECurrency = {}));","map":null,"metadata":{},"sourceType":"module"}
