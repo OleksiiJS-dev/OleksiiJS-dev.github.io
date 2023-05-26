@@ -8,8 +8,9 @@ p {
 body {
   margin-top: 400px;
   height: 400vh;
-  
+
 }
+
 /*  */
 .wrapper {
   font-family: "Source Sans Pro", sans-serif;
@@ -643,13 +644,15 @@ body {
     margin-top: 30.5px;
     line-height: 40px;
   }
-  .popup-close{
+
+  .popup-close {
     padding: 8px 8px 0 0;
   }
+
   .popup-close .popup-cross {
     height: 39px;
     fill: #FFFFFF;
-}
+  }
 }
 
 @media (max-width: 720px) {
@@ -660,12 +663,15 @@ body {
     width: 560px;
     height: 311px;
   }
+
   .form-block {
     max-width: 560px;
-}
-.converter-block-side {
-  flex-basis: 270px;
-}
+  }
+
+  .converter-block-side {
+    flex-basis: 270px;
+  }
+
   .popup .popup-header {
     font-size: 22.4px;
     margin-top: 20px;
@@ -748,14 +754,13 @@ body {
   .small {
     flex-basis: 560px;
     max-width: none;
+    padding: 0;
+    height: 141px;
   }
 
   .converter-block .converter-block-side .converter-input__get {
-    padding: 15px 25px;
-  }
-
-  .converter-block .converter-block-side .converter-input__give {
-    padding: 15px 25px;
+    padding-right: 38px;
+    padding-left: 15px;
   }
 
   .small-get__label {
@@ -769,99 +774,42 @@ body {
   }
 }
 
-@media (max-width: 474px) {
+@media (max-width: 456px) {
+  .converter-block-side {
+    flex-basis: 141px;
+  }
+
+  .converter-block .converter-block-side {}
+
+  .small {
+    padding-bottom: 0px !important;
+  }
 
   .converter-block {
     flex-direction: column;
   }
 
-  .converter-block-side {
-    flex-basis: 146px;
-  }
-
-  .converter-block-side .converter-button {
-    padding: 7px 12px;
-  }
-
-  .converter-block-side .side-title {
-    text-align: center;
-    width: 100%;
-    padding: 15px 0px;
-  }
-
-  .converter-block-side .converter-get-title {
-    padding: 15px 0px;
-  }
-
-  .converter-block .converter-block-side .side-title {
-    font-size: 25px;
-    line-height: 80%;
-    color: #FFFFFF;
-    margin-bottom: 17px;
-    padding: 15px 0;
-    display: inline-block;
-    background: #3e4046;
-    margin-top: -10px;
-    border-radius: 10px;
-  }
-
-  .converter-block .converter-block-side .converter-button-container .converter-button {
-    cursor: pointer;
-    padding: 15px 35px;
-    border-radius: 3px;
-    background: #558ac7;
-    font-size: 18px;
-    line-height: 22px;
-  }
-
-  .form-block {
-    min-width: 302px;
-  }
-
-  .small {
-    padding-bottom: 0px;
-    flex-basis: 0px;
-  }
-
-  .converter-block .converter-button__reverse {
+  .converter-button__reverse {
     display: none;
-  }
-
-  .small-reverse {
-    display: block !important;
-    left: 50%;
-    top: 113px;
-    transform: translateX(-50%);
   }
 
   .converter-block .converter-block-side .converter-input .input-get__label {
     right: 42px !important;
   }
 
-  .form-block .form-block__form .form-block__messenger-list {
-    display: flex;
-    gap: 38px;
+  .converter-block .converter-block-side .converter-input__get {
+    padding-right: 38px;
+    padding-left: 15px;
+  }
+
+  .small-reverse {
+    display: block;
   }
 }
 
 @media (max-width: 346px) {
   .converter-block {
     gap: 21px;
-  }
-
-  .converter-block-side {
-    flex-basis: 140px;
-  }
-
-  .small {
-    padding-bottom: 0px;
-    flex-basis: 0px;
-  }
-
-  .small-reverse {
-    left: 50%;
-    top: 113px !important;
-    transform: translateX(-50%) !important;
   }
 }
 
