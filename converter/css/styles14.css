@@ -770,7 +770,7 @@ body {
   .small-reverse {
     left: 50%;
     top: 113px !important;
-    transform: translateX(-50%) !important;
+    transform: translateX(-50%) rotate(90deg) !important;
   }
 }
 
