@@ -6,6 +6,7 @@ p {
 
 /*  */
 body {
+  margin-top: 400px;
   height: 400vh;
   
 }
@@ -564,7 +565,7 @@ body {
   fill: #FFFFFF;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1201px) {
   .converter-block-side {
     flex-basis: 520px;
   }
